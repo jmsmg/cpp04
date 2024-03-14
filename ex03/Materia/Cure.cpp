@@ -2,6 +2,7 @@
 
 Cure::Cure()
 {
+	this->type = "cure";
 	std::cout << "Cure default constructor called" << std::endl;
 }
 

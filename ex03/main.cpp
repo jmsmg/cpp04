@@ -5,41 +5,55 @@
 
 int main()
 {
+	std::cout << std::endl;
+	std::cout << "----Materia constructor test----" << std::endl;
 	IMateriaSource* src = new MateriaSource();
-	std::cout << "-------------1-----------------" << std::endl;
+	std::cout << std::endl;
+	std::cout << "-----Ice LearnMateria test------" << std::endl;
 	src->learnMateria(new Ice());
-	std::cout << "-------------2-----------------" << std::endl;
 
+	std::cout << std::endl;
+	std::cout << "-----Cure LearnMateria test-----" << std::endl;
 	src->learnMateria(new Cure());
-	std::cout << "-------------3-----------------" << std::endl;
 
+	std::cout << std::endl;
+	std::cout << "---Character constructor test---" << std::endl;
 	ICharacter* me = new Character("me");
-	std::cout << "-------------4-----------------" << std::endl;
 
 	AMateria* tmp;
-	std::cout << "-------------5-----------------" << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << "----createMateria, equip test---" << std::endl;
+	std::cout << "-------------ice----------------" << std::endl;
 
 	tmp = src->createMateria("ice");
-	std::cout << "-------------6----------------" << std::endl;
-
 	me->equip(tmp);
-	std::cout << "-------------7----------------" << std::endl;
 
+	delete tmp;
+
+	std::cout << std::endl;
+	std::cout << "------------cure----------------" << std::endl;
 	tmp = src->createMateria("cure");
-	std::cout << "-------------8----------------" << std::endl;
-
 	me->equip(tmp);
-	std::cout << "-------------9----------------" << std::endl;
 
+	std::cout << std::endl;
+	std::cout << "---Character constructor test---" << std::endl;
 	ICharacter* bob = new Character("bob");
-	std::cout << "-------------10----------------" << std::endl;
+	std::cout << std::endl;
+	std::cout << "----------use test--------------" << std::endl;
 
 	me->use(0, *bob);
-
 	me->use(1, *bob);
 
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << "---------all destructor---------" << std::endl;
+	std::cout << "--------------bob---------------" << std::endl;
 	delete bob;
+	std::cout << "--------------me----------------" << std::endl;
 	delete me;
+	std::cout << "--------------src----------------" << std::endl;
 	delete src;
+	while (1){}
 	return 0;
 }
