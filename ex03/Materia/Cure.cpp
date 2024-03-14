@@ -5,9 +5,9 @@ Cure::Cure()
 	std::cout << "Cure default constructor called" << std::endl;
 }
 
-Cure::Cure(Cure const &type)
+Cure::Cure(Cure const &input)
 {
-	*this = type;
+	this->type = input.type;
 	std::cout << "Cure copy constructor called" << std::endl;
 }
 
@@ -38,6 +38,7 @@ AMateria	*Cure::clone() const
 
 	tmp->type = this->type;
 
+	std::cout << "Cure clone function called" << std::endl;
 	return (tmp);
 }
 

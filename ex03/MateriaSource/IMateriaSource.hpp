@@ -3,7 +3,9 @@
 
 #include "../Materia/AMateria.hpp"
 
-class IMateriaSource
+class	AMateria;
+
+class	IMateriaSource
 {
 	public:
 		virtual ~IMateriaSource() {}

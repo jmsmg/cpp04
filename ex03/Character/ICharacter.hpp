@@ -1,8 +1,7 @@
 #ifndef	ICHARACTER_HPP
 #define ICHARACTER_HPP
 
-#include "../Materia/Cure.hpp"
-#include "../Materia/Ice.hpp"
+#include "../Materia/AMateria.hpp"
 
 class AMateria;
 

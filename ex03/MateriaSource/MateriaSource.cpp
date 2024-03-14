@@ -2,10 +2,6 @@
 
 MateriaSource::MateriaSource()
 {
-	for (int i = 0; i < 4; i++)
-	{
-		this->materia[i] = nullptr;
-	}
 	std::cout << "MateriaSource default constructor called" << std::endl;
 }
 
@@ -57,6 +53,9 @@ void	MateriaSource::learnMateria(AMateria *input)
 
 AMateria	*MateriaSource::createMateria(std::string const &type)
 {
+	if (type != "cure" && type != "ice")
+		return (0);
+
 	AMateria	*tmp = nullptr;
 
 	for (int i = 0; i < 4; i++)
@@ -67,8 +66,8 @@ AMateria	*MateriaSource::createMateria(std::string const &type)
 			break ;
 		}
 	}
-	if (!tmp)
-		return (nullptr);
+	
 	std::cout << "createMateria function called" << std::endl;
+	
 	return (tmp);
 }

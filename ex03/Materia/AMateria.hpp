@@ -5,6 +5,8 @@
 #include <iostream>
 #include "../Character/ICharacter.hpp"
 
+class ICharacter;
+
 class AMateria
 {
 	protected:
@@ -13,7 +15,7 @@ class AMateria
 	public:
 		AMateria();
 		AMateria(std::string const &type);
-		AMateria::AMateria(AMateria const &input);
+		AMateria(AMateria const &input);
 		AMateria	&operator=(const AMateria &input);
 		virtual ~AMateria();
 

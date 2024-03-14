@@ -2,7 +2,12 @@ CC = C++
 FLAG = -Wall -Wextra -Werror -std=c++98
 NAME = a.out
 OBJS = $(SRCS:.cpp=.o)
-SRCS = main.cpp
+SRCS = main.cpp \
+		Character/Character.cpp \
+		Materia/AMateria.cpp \
+		Materia/Cure.cpp \
+		Materia/Ice.cpp \
+		MateriaSource/MateriaSource.cpp
 
 %.o: %.cpp
 	$(CC) $(FLAG) -o $@ -c $<

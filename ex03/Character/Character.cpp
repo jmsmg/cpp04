@@ -47,6 +47,8 @@ std::string	const &Character::getName() const
 
 void	Character::equip(AMateria *m)
 {
+	if (!m)
+		return ;
 	for (int i = 0; i < 4; i++)
 	{
 		if (this->materia[i] == nullptr)
@@ -55,6 +57,7 @@ void	Character::equip(AMateria *m)
 			break ;
 		}
 	}
+	std::cout << "Character equip function called" << std::endl;
 }
 
 void	Character::unequip(int idx)

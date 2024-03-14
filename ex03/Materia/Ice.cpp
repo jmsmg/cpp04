@@ -5,9 +5,9 @@ Ice::Ice()
 	std::cout << "Ice default constructor called" << std::endl;
 }
 
-Ice::Ice(Ice const &type)
+Ice::Ice(Ice const &input)
 {
-	*this = type;
+	this->type = input.type;
 	std::cout << "Ice copy constructor called" << std::endl;
 }
 
@@ -37,6 +37,8 @@ AMateria	*Ice::clone() const
 	Ice	*tmp = new Ice();
 
 	tmp->type = this->type;
+
+	std::cout << "Ice clone function called" << std::endl;
 
 	return (tmp);
 }

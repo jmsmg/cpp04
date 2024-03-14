@@ -12,7 +12,7 @@ class Character : public ICharacter
 	public:
 		Character();
 		Character(const std::string name);
-		Character::Character(Character const &input);
+		Character(Character const &input);
 		Character	&operator=(const Character &input);
 		~Character();
 
