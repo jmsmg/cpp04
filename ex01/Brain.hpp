@@ -9,7 +9,12 @@ class	Brain
 		std::string	ideas[100];
 
 	public:
-		
-}
+		Brain();
+		Brain(const Brain &brain);
+		Brain &operator=(const Brain &brain);
+		~Brain();
+		std::string	*getIdeas();
+		void		setIdeas(std::string *ideas);
+};
 
 #endif

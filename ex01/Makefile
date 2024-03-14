@@ -2,7 +2,7 @@ CC = C++
 FLAG = -Wall -Wextra -Werror -std=c++98
 NAME = a.out
 OBJS = $(SRCS:.cpp=.o)
-SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
+SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
 %.o: %.cpp
 	$(CC) $(FLAG) -o $@ -c $<
