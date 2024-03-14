@@ -28,8 +28,8 @@ Animal::~Animal()
 
 std::string	Animal::getType() const
 {
-	return (this->type);
 	std::cout << "excute getType" << std::endl;
+	return (this->type);
 }
 
 void	Animal::setType(const std::string str)
