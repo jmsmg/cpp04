@@ -4,39 +4,53 @@
 
 int	main()
 {
-	const Animal	*meta = new Animal;
-	const Animal	*j = new Dog();
-	const Animal	*i = new Cat();
+	Animal	*animal[4];
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+	std::cout << "------------------------------------" << std::endl;
+	std::cout << "------------ test start ------------" << std::endl;
+	std::cout << "------------------------------------" << std::endl;
+	std::cout << std::endl;
 
-	std::cout << "---- delete Animal----" << std::endl;
-	delete meta;
-	std::cout << "---- delete Dog----" << std::endl;
-	delete i;
-	std::cout << "---- delete Cat----" << std::endl;
-	delete j;
+	for (int i = 0; i < 4; i++)
+	{
+		if (i % 2)
+		{
+			std::cout << "------------- make Cat -------------" << std::endl;
+			animal[i] = new Cat();
+			std::cout << "------------------------------------" << std::endl;
+		}
+		else
+		{
+			std::cout << "------------- make Dog -------------" << std::endl;
+			animal[i] = new Dog();
+			std::cout << "------------------------------------" << std::endl;
+		}
+	}
 
 	std::cout << std::endl;
 	std::cout << std::endl;
 
-	std::cout << "---- new WrongAnimal ----" << std::endl;
-	const WrongAnimal	*wronganimal = new WrongAnimal();
-	std::cout << "---- new WrongCat ----" << std::endl;
-	const WrongAnimal	*wrongcat = new WrongCat();
-
-	std::cout << wronganimal->getType() << " " << std::endl;
-	std::cout << wrongcat->getType() << " " << std::endl;
-
-	wronganimal->makeSound();
-	wrongcat->makeSound();
-
-	std::cout << "----delete WrongAnimal----" << std::endl;
-	delete wronganimal;
-	std::cout << "----delete WrongCat----" << std::endl;
-	delete wrongcat;
+	std::cout << std::endl;
+	std::cout << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		if (i % 2)
+		{
+			std::cout << "------------ delete Cat ------------" << std::endl;
+			std::cout << "------------------------------------" << std::endl;
+			delete animal[i];
+			std::cout << "------------------------------------" << std::endl;
+		}
+		else
+		{
+			std::cout << "------------ delete Dog ------------" << std::endl;
+			std::cout << "------------------------------------" << std::endl;
+			delete animal[i];
+			std::cout << "------------------------------------" << std::endl;
+		}
+	}
+	while (1)
+	{
+		
+	}
 }
