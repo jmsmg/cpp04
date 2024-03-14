@@ -1,11 +1,14 @@
-#include "IMateriaSource.hpp"
-#include "AMateria.hpp"
+#include "./Character/Character.hpp"
+#include "./MateriaSource/MateriaSource.hpp"
+#include "./Materia/Cure.hpp"
+#include "./Materia/Ice.hpp"
 
 int main()
 {
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
+	ICharacter* me = new Character();
 	ICharacter* me = new Character("me");
 	AMateria* tmp;
 	tmp = src->createMateria("ice");

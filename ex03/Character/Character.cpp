@@ -5,6 +5,12 @@ Character::Character()
 	std::cout << "Character default constructor called" << std::endl;
 }
 
+Character::Character(const std::string name)
+{
+	this->name = name;
+	std::cout << "Character default constructor called" << std::endl;
+}
+
 Character::Character(Character const &input)
 {
 	this->name = input.name;
@@ -41,15 +47,26 @@ std::string	const &Character::getName() const
 
 void	Character::equip(AMateria *m)
 {
-	
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->materia[i] == nullptr)
+		{
+			this->materia[i] = m->clone();
+			break ;
+		}
+	}
 }
 
 void	Character::unequip(int idx)
 {
-
+	if (idx < 0 || 3 < idx)
+		return ;
+	this->materia[idx] = nullptr;
 }
 
-void	Character::use(int idx, Character &target)
+void	Character::use(int idx, ICharacter &target)
 {
-
+	if (idx < 0 || 3 < idx)
+		return ;
+	this->materia[idx]->use(target);
 }
