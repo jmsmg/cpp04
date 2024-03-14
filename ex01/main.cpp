@@ -29,7 +29,15 @@ int	main()
 
 	std::cout << std::endl;
 	std::cout << std::endl;
+	Dog dog = Dog();
 
+	dog.getBrain().inputIdea("first");
+	dog.getBrain().inputIdea("second");
+	dog.getBrain().inputIdea("third");
+
+	std::cout << (dog.getBrain().getIdeas())[0] << std::endl;
+	std::cout << (dog.getBrain().getIdeas())[1] << std::endl;
+	std::cout << (dog.getBrain().getIdeas())[2] << std::endl;
 	std::cout << std::endl;
 	std::cout << std::endl;
 	for (int i = 0; i < 4; i++)
@@ -48,9 +56,5 @@ int	main()
 			delete animal[i];
 			std::cout << "------------------------------------" << std::endl;
 		}
-	}
-	while (1)
-	{
-		
 	}
 }

@@ -45,11 +45,29 @@ void	Brain::setIdeas(std::string *ideas)
 		if (ideas[i] != "")
 		{
 			std::cout << "Brain size of ideas array > 100" << std::endl;
-			return ;
 		}
 	}
 	for (int i = 0; i < 100; i++)
 	{
 		this->ideas[i] = ideas[i];
+	}
+}
+
+void	Brain::inputIdea(const std::string idea)
+{
+	int i = 0;
+	std::cout << "Brain inputIdea called" << std::endl;
+	while (i < 100)
+	{
+		if (ideas[i] == "")
+		{
+			ideas[i] = idea;
+			break ;
+		}
+		i++;
+	}
+	if (i == 100)
+	{
+		std::cout << "Brain is full" << std::endl;
 	}
 }
