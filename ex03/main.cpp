@@ -20,24 +20,27 @@ int main()
 	std::cout << "---Character constructor test---" << std::endl;
 	ICharacter* me = new Character("me");
 
-	AMateria* tmp;
 	std::cout << std::endl;
 	std::cout << std::endl;
 	std::cout << "----createMateria, equip test---" << std::endl;
 	std::cout << "-------------ice----------------" << std::endl;
+	AMateria* tmp;
 
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
 
 	delete tmp;
+	tmp = nullptr;
 
 	std::cout << std::endl;
 	std::cout << "------------cure----------------" << std::endl;
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 
+	delete tmp;
 	std::cout << std::endl;
 	std::cout << "---Character constructor test---" << std::endl;
+
 	ICharacter* bob = new Character("bob");
 	std::cout << std::endl;
 	std::cout << "----------use test--------------" << std::endl;
