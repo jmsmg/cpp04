@@ -55,6 +55,6 @@ int main()
 	delete me;
 	std::cout << "--------------src----------------" << std::endl;
 	delete src;
-	while (1){}
+	// while (1){}
 	return 0;
 }
