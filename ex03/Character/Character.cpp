@@ -64,6 +64,7 @@ void	Character::unequip(int idx)
 {
 	if (idx < 0 || 3 < idx)
 		return ;
+	delete this->materia[idx];
 	this->materia[idx] = nullptr;
 }
 

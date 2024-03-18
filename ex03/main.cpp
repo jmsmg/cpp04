@@ -29,15 +29,11 @@ int main()
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
 
-	delete tmp;
-	tmp = nullptr;
-
 	std::cout << std::endl;
 	std::cout << "------------cure----------------" << std::endl;
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 
-	delete tmp;
 	std::cout << std::endl;
 	std::cout << "---Character constructor test---" << std::endl;
 
@@ -54,6 +50,8 @@ int main()
 	std::cout << "--------------bob---------------" << std::endl;
 	delete bob;
 	std::cout << "--------------me----------------" << std::endl;
+	me->unequip(0);
+	me->unequip(1);
 	delete me;
 	std::cout << "--------------src----------------" << std::endl;
 	delete src;

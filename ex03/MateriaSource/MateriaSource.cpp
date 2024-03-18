@@ -44,8 +44,7 @@ void	MateriaSource::learnMateria(AMateria *input)
 	{
 		if (this->materia[i] == nullptr)
 		{
-			this->materia[i] = input->clone();
-			delete input;
+			this->materia[i] = input;
 			break ;
 		}
 		if (i == 3)
