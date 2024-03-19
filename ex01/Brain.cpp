@@ -2,6 +2,7 @@
 
 Brain::Brain()
 {
+	this->ideas = new std::string[100];
 	std::cout << "Brain default constructor called" << std::endl;
 }
 
@@ -30,6 +31,7 @@ Brain	&Brain::operator=(const Brain &brain)
 Brain::~Brain()
 {
 	std::cout << "Brain default destructor called" << std::endl;
+	delete this->ideas;
 }
 
 std::string	*Brain::getIdeas()
