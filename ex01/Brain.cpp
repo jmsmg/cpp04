@@ -2,7 +2,6 @@
 
 Brain::Brain()
 {
-	this->ideas = new std::string[100];
 	std::cout << "Brain default constructor called" << std::endl;
 }
 
@@ -31,7 +30,6 @@ Brain	&Brain::operator=(const Brain &brain)
 Brain::~Brain()
 {
 	std::cout << "Brain default destructor called" << std::endl;
-	delete this->ideas;
 }
 
 std::string	*Brain::getIdeas()
@@ -42,13 +40,6 @@ std::string	*Brain::getIdeas()
 void	Brain::setIdeas(std::string *ideas)
 {
 	std::cout << "Brain setIdeas function called" << std::endl;
-	for (int i = 0; i < 100; i++)
-	{
-		if (ideas[i] != "")
-		{
-			std::cout << "Brain size of ideas array > 100" << std::endl;
-		}
-	}
 	for (int i = 0; i < 100; i++)
 	{
 		this->ideas[i] = ideas[i];

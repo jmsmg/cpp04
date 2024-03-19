@@ -11,6 +11,7 @@ int	main()
 	std::cout << "------------------------------------" << std::endl;
 	std::cout << std::endl;
 
+
 	for (int i = 0; i < 4; i++)
 	{
 		if (i % 2)

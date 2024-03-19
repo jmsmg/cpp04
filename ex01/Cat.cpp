@@ -10,7 +10,7 @@ Cat::Cat()
 Cat::Cat(const Cat &cat)
 {
 	this->type = cat.type;
-	this->brain = cat.brain;
+	this->brain->setIdeas(cat.getBrain().getIdeas());
 	std::cout << "Cat copy constructor called" << std::endl;
 }
 
@@ -20,7 +20,7 @@ Cat	&Cat::operator=(const Cat &cat)
 	{
 		std::cout << "Cat copy assignment operator called" << std::endl;
 		this->type = cat.type;
-		this->brain = cat.brain;
+		this->brain->setIdeas(cat.getBrain().getIdeas());
 	}
 	return (*this);
 }
@@ -34,14 +34,14 @@ Cat::~Cat()
 
 std::string	Cat::getType() const
 {
+	std::cout << "Cat getType called" << std::endl;
 	return (this->type);
-	std::cout << "Cat excute getType" << std::endl;
 }
 
 void	Cat::setType(const std::string str)
 {
 	this->type = str;
-	std::cout << "Cat excute setType" << std::endl;
+	std::cout << "Cat setType called" << std::endl;
 }
 
 void	Cat::setBrain(Brain &brain)
