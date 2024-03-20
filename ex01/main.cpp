@@ -35,10 +35,15 @@ int	main()
 	dog.getBrain().inputIdea("first");
 	dog.getBrain().inputIdea("second");
 	dog.getBrain().inputIdea("third");
+	Dog dog2 = dog;
+
+
+	dog2.getBrain().inputIdea("t");
 
 	std::cout << (dog.getBrain().getIdeas())[0] << std::endl;
 	std::cout << (dog.getBrain().getIdeas())[1] << std::endl;
 	std::cout << (dog.getBrain().getIdeas())[2] << std::endl;
+	std::cout << (dog.getBrain().getIdeas())[3] << std::endl;
 	std::cout << std::endl;
 	std::cout << std::endl;
 	for (int i = 0; i < 4; i++)
@@ -58,4 +63,5 @@ int	main()
 			std::cout << "------------------------------------" << std::endl;
 		}
 	}
+	while (1){}
 }

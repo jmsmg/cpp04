@@ -60,11 +60,17 @@ void	Character::equip(AMateria *m)
 	std::cout << "Character equip function called" << std::endl;
 }
 
+void	Character::deleteEquip(int idx)
+{
+	if (idx < 0 || 3 < idx)
+		return ;
+	delete this->materia[idx];	
+}
+
 void	Character::unequip(int idx)
 {
 	if (idx < 0 || 3 < idx)
 		return ;
-	delete this->materia[idx];
 	this->materia[idx] = nullptr;
 }
 

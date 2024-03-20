@@ -2,14 +2,27 @@
 
 Dog::Dog()
 {
+	this->type = "Dog";
+	this->flag = 1;
 	this->brain = new Brain();
 	std::cout << "Dog default constructor called" << std::endl;
 }
 
 Dog::Dog(const Dog &dog)
 {
+	Brain *tmp = new Brain();
+
+	tmp->setIdeas(dog.getBrain().getIdeas());
+
+	std::cout << this->brain->getIdeas() << std::endl;
+	if (flag == 1)
+	{
+		flag = 0;
+		delete this->brain;
+	}
+	this->brain = tmp;
+	std::cout << "hihi" << std::endl;
 	this->type = dog.type;
-	this->brain->setIdeas(dog.getBrain().getIdeas());
 	std::cout << "Dog copy constructor called" << std::endl;
 }
 
@@ -17,9 +30,17 @@ Dog	&Dog::operator=(const Dog &dog)
 {
 	if (this != &dog)
 	{
-		std::cout << "Dog copy assignment operator called" << std::endl;
+		Brain *tmp = new Brain();
+
+		tmp->setIdeas(dog.getBrain().getIdeas());
+		if (flag == 1)
+		{
+			flag = 0;
+			delete this->brain;
+		}
+		this->brain = tmp;	
 		this->type = dog.type;
-		this->brain->setIdeas(dog.getBrain().getIdeas());
+		std::cout << "Dog copy assignment operator called" << std::endl;
 	}
 	return (*this);
 }

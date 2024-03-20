@@ -6,6 +6,7 @@
 class	Dog : public Animal
 {
 	private:
+		int		flag;
 		Brain	*brain;
 
 	public:

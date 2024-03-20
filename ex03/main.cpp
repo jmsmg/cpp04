@@ -50,7 +50,9 @@ int main()
 	std::cout << "--------------bob---------------" << std::endl;
 	delete bob;
 	std::cout << "--------------me----------------" << std::endl;
+	((Character *)me)->deleteEquip(0);
 	me->unequip(0);
+	((Character *)me)->deleteEquip(1);
 	me->unequip(1);
 	delete me;
 	std::cout << "--------------src----------------" << std::endl;

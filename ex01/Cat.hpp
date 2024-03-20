@@ -6,6 +6,7 @@
 class	Cat : public Animal
 {
 	private:
+		int		flag;
 		Brain	*brain;
 
 	public:

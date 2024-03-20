@@ -17,9 +17,9 @@ int	main()
 	std::cout << "---- delete Animal----" << std::endl;
 	delete meta;
 	std::cout << "---- delete Dog----" << std::endl;
-	delete i;
-	std::cout << "---- delete Cat----" << std::endl;
 	delete j;
+	std::cout << "---- delete Cat----" << std::endl;
+	delete i;
 
 	std::cout << std::endl;
 	std::cout << std::endl;
