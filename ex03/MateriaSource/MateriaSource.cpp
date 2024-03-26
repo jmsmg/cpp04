@@ -29,7 +29,7 @@ MateriaSource::~MateriaSource()
 	for (int i = 0; i < 4; i++)
 	{
 		std::cout << i << std::endl;
-		if (this->materia[i] != nullptr)
+		if (this->materia[i])
 		{
 			delete this->materia[i];
 		}
@@ -42,7 +42,7 @@ void	MateriaSource::learnMateria(AMateria *input)
 	std::cout << "learnMateria function called" << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->materia[i] == nullptr)
+		if (!(this->materia[i]))
 		{
 			this->materia[i] = input;
 			break ;
@@ -57,7 +57,7 @@ AMateria	*MateriaSource::createMateria(std::string const &type)
 	if (type != "cure" && type != "ice")
 		return (0);
 
-	AMateria	*tmp = nullptr;
+	AMateria	*tmp;
 
 	for (int i = 0; i < 4; i++)
 	{

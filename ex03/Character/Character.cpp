@@ -51,7 +51,7 @@ void	Character::equip(AMateria *m)
 		return ;
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->materia[i] == nullptr)
+		if (!(this->materia[i]))
 		{
 			this->materia[i] = m->clone();
 			break ;
@@ -71,7 +71,7 @@ void	Character::unequip(int idx)
 {
 	if (idx < 0 || 3 < idx)
 		return ;
-	this->materia[idx] = nullptr;
+	this->materia[idx] = '\0';
 }
 
 void	Character::use(int idx, ICharacter &target)

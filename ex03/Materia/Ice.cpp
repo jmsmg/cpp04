@@ -6,7 +6,7 @@ Ice::Ice()
 	std::cout << "Ice default constructor called" << std::endl;
 }
 
-Ice::Ice(Ice const &input)
+Ice::Ice(Ice const &input): AMateria()
 {
 	this->type = input.type;
 	std::cout << "Ice copy constructor called" << std::endl;

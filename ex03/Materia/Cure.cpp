@@ -6,7 +6,7 @@ Cure::Cure()
 	std::cout << "Cure default constructor called" << std::endl;
 }
 
-Cure::Cure(Cure const &input)
+Cure::Cure(Cure const &input): AMateria()
 {
 	this->type = input.type;
 	std::cout << "Cure copy constructor called" << std::endl;

@@ -8,7 +8,7 @@ Dog::Dog()
 	std::cout << "Dog default constructor called" << std::endl;
 }
 
-Dog::Dog(const Dog &dog)
+Dog::Dog(const Dog &dog): Animal(dog)
 {
 	Brain *tmp = new Brain();
 
@@ -21,7 +21,6 @@ Dog::Dog(const Dog &dog)
 		delete this->brain;
 	}
 	this->brain = tmp;
-	std::cout << "hihi" << std::endl;
 	this->type = dog.type;
 	std::cout << "Dog copy constructor called" << std::endl;
 }
