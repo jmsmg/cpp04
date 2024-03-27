@@ -71,7 +71,7 @@ void	Character::unequip(int idx)
 {
 	if (idx < 0 || 3 < idx)
 		return ;
-	this->materia[idx] = '\0';
+	this->materia[idx] = NULL;
 }
 
 void	Character::use(int idx, ICharacter &target)

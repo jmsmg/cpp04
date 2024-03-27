@@ -57,7 +57,7 @@ AMateria	*MateriaSource::createMateria(std::string const &type)
 	if (type != "cure" && type != "ice")
 		return (0);
 
-	AMateria	*tmp;
+	AMateria	*tmp = NULL;
 
 	for (int i = 0; i < 4; i++)
 	{
@@ -67,8 +67,6 @@ AMateria	*MateriaSource::createMateria(std::string const &type)
 			break ;
 		}
 	}
-	
 	std::cout << "createMateria function called" << std::endl;
-	
 	return (tmp);
 }
